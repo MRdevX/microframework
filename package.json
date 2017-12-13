@@ -1,20 +1,33 @@
 {
-  "name": "microframework",
+  "name": "microframework-w3tec",
   "private": true,
   "version": "0.6.3",
   "description": "Microframework is a minimalistic framework you can use with TypeScript and JavaScript.",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "author": {
-    "name": "Umed Khudoiberdiev",
-    "email": "pleerock.me@gmail.com"
-  },
+  "author": "w3tec.ch <info@w3tec.ch>",
+  "contributors": [
+    {
+      "name": "David Weber",
+      "email": "david.weber@w3tec.ch",
+      "url": "https://github.com/dweber019"
+    },
+    {
+      "name": "Gery Hirschfeld",
+      "email": "gery.hirschfeld@w3tec.ch",
+      "url": "https://github.com/hirsch88"
+    },
+    {
+      "name": "Umed Khudoiberdiev",
+      "email": "pleerock.me@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pleerock/microframework.git"
+    "url": "https://github.com/w3tec/microframework.git"
   },
   "bugs": {
-    "url": "https://github.com/pleerock/microframework/issues"
+    "url": "https://github.com/w3tec/microframework/issues"
   },
   "tags": [
     "microframework",
