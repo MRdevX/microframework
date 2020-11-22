@@ -1,6 +1,6 @@
-import {Microframework} from "./Microframework";
-import {MicroframeworkBootstrapConfig} from "./MicroframeworkBootstrapConfig";
-import {MicroframeworkLoader} from "./MicroframeworkLoader";
+import { Microframework } from "./Microframework";
+import { MicroframeworkBootstrapConfig } from "./MicroframeworkBootstrapConfig";
+import { MicroframeworkLoader } from "./MicroframeworkLoader";
 
 // -------------------------------------------------------------------------
 // Handy Exports
@@ -20,20 +20,29 @@ export * from "./MicroframeworkBootstrapConfig";
 /**
  * Creates a new microframework instance that can be configured and launched.
  */
-export function bootstrapMicroframework(config: MicroframeworkBootstrapConfig): Promise<Microframework>;
+export function bootstrapMicroframework(
+  config: MicroframeworkBootstrapConfig
+): Promise<Microframework>;
 
 /**
  * Creates a new microframework instance that can be configured and launched.
  */
-export function bootstrapMicroframework(modules: MicroframeworkLoader[]): Promise<Microframework>;
+export function bootstrapMicroframework(
+  modules: MicroframeworkLoader[]
+): Promise<Microframework>;
 
 /**
  * Creates a new microframework instance that can be configured and launched.
  */
-export function bootstrapMicroframework(configOrModules: MicroframeworkBootstrapConfig|MicroframeworkLoader[]): Promise<Microframework> {
-    const bootstrapConfig: MicroframeworkBootstrapConfig = configOrModules instanceof Array ? { loaders: configOrModules } : configOrModules;
-    return new Microframework()
-        .config(bootstrapConfig.config)
-        .registerLoaders(bootstrapConfig.loaders)
-        .bootstrap();
+export function bootstrapMicroframework(
+  configOrModules: MicroframeworkBootstrapConfig | MicroframeworkLoader[]
+): Promise<Microframework> {
+  const bootstrapConfig: MicroframeworkBootstrapConfig =
+    configOrModules instanceof Array
+      ? { loaders: configOrModules }
+      : configOrModules;
+  return new Microframework()
+    .config(bootstrapConfig.config)
+    .registerLoaders(bootstrapConfig.loaders)
+    .bootstrap();
 }
